@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
-  get 'hello/index'
+  get '/home/index.html.erb' => 'home#index'
+  get '/home/report.html.erb' => 'home#report'
+  get '/home/toilet_detail_info.html.erb' => 'home#toilet_detail_info'
+  get '/home/select_toilet.html.erb' => 'home#select_toilet'
+  get '/home/notice.html.erb' => 'home#notice'
+  
+  get '/home/notice'
+  get '/home/index'
+  get '/home/report'
+  get '/home/toilet_detail_info'
+  get '/home/select_toilet' 
 
-  root 'hello#index'
+  
+  root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,40 @@
+/* mh : toilet_detail_info.html의 CSS*/
+
+/* mh : 전체를 감싸는 container CSS*/
+#toilet_info_container{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  height: 80vh;
+}
+
+/* mh : 화장실 상세 정보 (누적신고량, 점검일, 수거한 불법카메라 수거 정보)를 보여주는 part*/
+#toilet_listview{
+  width: 100%;
+  height: 80%;
+  margin:0px;
+  padding: 0px;
+}
+
+.list-group-item{
+
+  padding-top : 30px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  font-size: 30px;
+
+}
+
+
+/* mh : 신고하기, 신고된 사진 보기 버튼들을 보여주는 part*/
+#toilet_btnview{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content : space-around;
+    margin : 0px;
+    padding : 0px;
+
+}
+
+

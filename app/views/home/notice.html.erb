@@ -1,0 +1,94 @@
+
+<!--공지사항 -->
+
+<head>
+
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 	<!-- Lato Font CDN -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+
+
+	<!-- Your Custom CSS -->
+	<link rel="stylesheet" href="notice.scss">
+</head>
+
+<body>
+	
+	
+	
+	<div class="header">
+		공지사항
+	</div>
+
+	<!-- Contenedor -->
+	<ul id="accordion" class="accordion">
+	  <li>
+	    <div class="link">8월 29일 상황보고<i class="fa fa-chevron-down"></i></div>
+	    <ul class="submenu">
+	      <li>그립다 말을 할까 하니 그리워 그냥 갈까 그래도 다시 더 한 번 저 산에도 가마귀, 들에 가마귀 서산에는 해 진다고 지저귑니다. 앞강물, 뒷강물 흐르는 물은 어서 따라오라고 따라 가자고 흘러도 연달아 흐릅디다려. -<개벽>(1923.10)-</li>
+	    </ul>
+	  </li>
+	  <li>
+	    <div class="link">8월 22일 상황보고<i class="fa fa-chevron-down"></i></div>
+	    <ul class="submenu">
+	      <li>달에는 은도끼로 찍어 낼 계수나무가 박혀 있다는 할머니의 말씀이 영원히 아름다운 진리임을 오늘도 믿으며 살고 싶습니다. 어렸을 적에 불같이 끓던 병석에서 한없이 밑으로만 떨어져 가던 그토록 아득한 추락과 그 속력으로 몇 번이고 까무러쳤던 그런 공포의 기억이 진리라는 이 무서운 진리로부터 우리들의 소중한 꿈을 꼭 안아 지키게 해 주십시오. - <여백을 위한 서정>(1959) -</li>
+	    </ul>
+	  </li>
+	  <li>
+	    <div class="link">8월 15일 상황보고<i class="fa fa-chevron-down"></i></div>
+	    <ul class="submenu">
+	      <li>가을에는 사랑하게 하소서 … 오직 한 사람을 택하게 하소서 가장 아름다운 열매를 위하여 이 비옥한 시간을 가꾸게 하소서. 가을에는 호올로 있게 하소서 … 나의 영혼, 굽이치는 바다와 백합(百合)의 골짜기를 지나, 마른 나뭇가지 위에 다다른 까마귀같이. -<김현승 시초>(1957)-</li>
+	    </ul>
+	  </li>
+	  <li>
+	    <div class="link">8월 8일 상황보고<i class="fa fa-chevron-down"></i></div>
+	    <ul class="submenu">
+	      <li>바닷가 햇빛 바른 바위 우에 습한 간을 펴서 말리우자. 코카서스 산중에서 도망해 온 토끼처럼 둘러리를 빙빙 돌려 간을 지키자. 내가 오래 기르던 여윈 독수리야! 와서 뜯어 먹어라, 시름없이 너는 살찌고 나는 여위어야지, 그러나 거북이야! 다시는 용궁의 유혹에 안 떨어진다. 프로메테우스 불쌍한 프로메테우스 불 도적한 죄로 목에 맷돌을 달고 끝없이 침전(沈澱)하는 프로메테우스. (1941. 11. 29.) <하늘과 바람과 별과 시> (1948)</li>
+	    </ul>
+	  </li>
+	</ul>
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
+	<script>
+		$(function() {
+			var Accordion = function(el, multiple) {
+				this.el = el || {};
+				this.multiple = multiple || false;
+
+				// Variables privadas
+				var links = this.el.find('.link');
+				// Evento
+				links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+			}
+
+			Accordion.prototype.dropdown = function(e) {
+				var $el = e.data.el;
+					$this = $(this),
+					$next = $this.next();
+
+				$next.slideToggle();
+				$this.parent().toggleClass('open');
+
+				if (!e.data.multiple) {
+					$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+				};
+			}	
+
+			var accordion = new Accordion($('#accordion'), false);
+		});
+	</script>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36251023-1']);
+	  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</body>

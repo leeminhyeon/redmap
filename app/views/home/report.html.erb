@@ -1,0 +1,30 @@
+<!-- mh : 사진 신고 페이지 -->
+<head>
+	<!--report.scss-->
+	<link rel="stylesheet" href="report.scss"/>
+</head>
+
+<div class="container" id="report_view">
+		<!-- mh : 사진 업로드 버튼 -->
+		<div class="row justify-content-center">
+			<button id="photo_upload_btn"></button>
+		</div>
+
+		<!-- mh : 업로드 된 사진을 보여준다 -->
+		<div class="row justify-content-center" id="show_photo_view">
+			<img id="upload_photo" class="row justify-content-center" src="/assets/photo_ex.jpg" alt="">
+		</div>
+
+
+		<!-- mh : 신고하기 버튼 -->
+		<div class="row justify-content-center">
+			<button id="submit_btn" onclick="myFunction()"></button>
+		</div>
+	</div>
+
+	<!-- mh : 신고하기 버튼 눌렀을 때 팝업 -->
+	<script>
+		function myFunction() {
+			alert("신고가 완료되었습니다.");
+		}
+	</script>
