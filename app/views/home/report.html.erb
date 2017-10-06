@@ -2,17 +2,25 @@
 <head>
 	<!--report.scss-->
 	<link rel="stylesheet" href="report.scss"/>
+	<link rel="stylesheet" href="application.scss"/>
 </head>
 
+	<header class="applicaition_navbar header row notice_nav align-items-center">
+		<a href="/home/toilet_detail_info.html.erb"><button class="col-2" id="back_btn"></button></a>
+		
+	</header>
+	
+
 <div class="container" id="report_view">
-		<!-- mh : 사진 업로드 버튼 -->
-		<div class="row justify-content-center">
-			<button id="photo_upload_btn"></button>
-		</div>
+
 
 		<!-- mh : 업로드 된 사진을 보여준다 -->
-		<div class="row justify-content-center" id="show_photo_view">
-			<img id="upload_photo" class="row justify-content-center" src="/assets/photo_ex.jpg" alt="">
+		<div class="row justify-content-center align-item-center" id="show_photo_view">
+			<!-- mh : 사진 업로드 버튼 -->
+			<!--<div class="row justify-content-center">-->
+			<!--<button id="photo_upload_btn"></button>-->
+			<!--</div>-->
+			<img id="upload_photo" class="row justify-content-center" src="/assets/default_image.png" alt="">
 		</div>
 
 

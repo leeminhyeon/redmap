@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>Workspace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  
+
   <!-- application CSS -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -14,11 +15,7 @@
   
   <!-- mh : 전체 navbar -->
   <header class="application_navbar">
-    <a href="/home/index.html.erb">홈페이지</a>
-    <a href="/home/select_toilet.html.erb">화장실 선택</a>
-    <a href="/home/toilet_detail_info.html.erb">화장실 정보</a>
-    <a href="/home/report.html.erb">신고페이지</a>
-    <a href="/home/notice.html.erb">공지</a>
+   
   </header>
   
 <%= yield %>

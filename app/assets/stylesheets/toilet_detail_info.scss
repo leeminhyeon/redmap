@@ -2,8 +2,7 @@
 
 /* mh : 전체를 감싸는 container CSS*/
 #toilet_info_container{
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  // margin-top: 0vh;
   height: 80vh;
 }
 
@@ -16,12 +15,14 @@
 }
 
 .list-group-item{
-
-  padding-top : 30px;
-  padding-bottom: 30px;
+  
+  color: #4D4D4D;
+  font-family: 'Open Sans', Sans-serif;
+  padding-top : 10px;
+  padding-bottom: 10px;
   margin-top: 20px;
   margin-bottom:20px;
-  font-size: 30px;
+  font-size: 25px;
 
 }
 
@@ -38,3 +39,39 @@
 }
 
 
+/*호선 숫자 이미지 크기 조절*/
+#station_number{
+  height : 5vh;
+  margin-right : 10px;
+}
+
+
+.station_nav {
+  height: 10vh;
+  /*background-color: #FFF;*/
+  color: #4D4D4D;
+  font-size: 3.5vh;
+  text-align: center;
+  font-weight: 800;
+}
+
+
+#station_name{
+  padding-left:0px;
+  padding-right:0px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  top : 0px;
+}
+
+body {
+  background: #E2E2E2/*#2d2c41*/;
+  font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+}

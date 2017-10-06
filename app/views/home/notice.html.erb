@@ -6,19 +6,20 @@
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
  	<!-- Lato Font CDN -->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
-
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 	<!-- Your Custom CSS -->
+	<link rel="stylesheet" href="application.scss">
 	<link rel="stylesheet" href="notice.scss">
 </head>
 
 <body>
 	
+	<header class="applicaition_navbar header row notice_nav align-items-center">
+		<a href="/home/index.html.erb"><button class="col-2" id="back_btn"></button></a>
+		<span class="col-8">공지사항</span>
+	</header>
 	
-	
-	<div class="header">
-		공지사항
-	</div>
 
 	<!-- Contenedor -->
 	<ul id="accordion" class="accordion">

@@ -2,7 +2,7 @@
 /*  mh : report 페이지 전체를 감싸는 컨테이너 CSS*/
 #report_view{
 	width : 100%;
-	height : 90vh;
+  height : 90vh;
 }
 
 
@@ -13,9 +13,10 @@
   background-repeat: no-repeat;
   border:none;
   padding: 0px;
+  background-color: #E2E2E2;
   /* mh : button 이미지(회색 버튼)*/
   width: 20%;
-  height: 10vh;
+  height: 12vh;
   /* mh : 버튼 내 background image의 크기*/
   background-size: 100% 100%;
   margin-top: 2vh;
@@ -31,7 +32,6 @@
 	margin:3vh 0px 3vh 0px;
 	width: 100%;
 	height: 60vh;
-	background-color: red;
 }
 
 /* mh : upload 된 이미지 */
@@ -48,11 +48,11 @@
   border:none;
   padding: 0px;
   /* mh : button 이미지(회색 버튼)*/
-  width: 60%;
-  height: 10vh;
+  width: 40%;
+  height: 8vh;
   /* mh : 버튼 내 background image의 크기*/
   background-size: 100% 100%;
-  margin-bottom : 2vh;
+  // margin-bottom : 2vh;
 }
 
 #submit_btn:before {

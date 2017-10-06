@@ -14,12 +14,15 @@
  *= require_self
  */
  /* mh : 전체 화면에 적용되는 applicaition_navbar css*/
-.application_navbar{
+
+
+#application_navbar{
     width: 100%;
     height: 10vh;
     background-color: red;
     margin : 0px;
     padding : 0px;
+    top : 0px;
     display: flex;
     position: fixed;
     
@@ -38,4 +41,26 @@ body{
 
 
 */
+
+/*back_btn CSS*/
+/*back_btn*/
+/*button의 background 이미지*/
+#back_btn {
+  background-image: url("back_button.png");
+  background-repeat: no-repeat;
+  border:none;
+  background-color: #E2E2E2;
+ 
+  padding: 0px;
+  /*button 이미지(회색 버튼)*/
+  width: 100%;
+  height: 8vh;
+  /*버튼 내 background image의 크기*/
+  margin: 10px 0px 0px 10px;
+  background-size: 100% 80%;
+}
+#back_btn:before {
+  content: url("back_button.png");
+  visibility: hidden;
+}
 
