@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Javascript image dropdown - CSS sprite</title>
+<link rel="stylesheet" href="css/sample.css" />
+<script src="../js/jquery/jquery-1.9.0.min.js"></script>
+<!-- <msdropdown> -->
+<link rel="stylesheet" type="text/css" href="../css/msdropdown/dd.css" />
+<link rel="stylesheet" type="text/css" href="../css/msdropdown/sprite.css" />
+<script src="../js/msdropdown/jquery.dd.min.js"></script>
+<!-- </msdropdown> -->
+<link rel="stylesheet" type="text/css" href="../css/msdropdown/flags.css" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="1" cellpadding="5" class="topmenu">
+  <tr>
+    <td colspan="2" class="top"><h1>Javascript image dropdown <span id="ver"></span> <a title="Download" href="http://www.marghoobsuleman.com/jquery-image-dropdown" class="small">Download</a></h1></td>
+  </tr>
+  <tr>
+    <td width="25%"><select style="width:250px"  name="pages" id="pages">
+      <option value="" selected="selected">Choose a sample page</option>
+      <option value="index.html">Normal</option>
+      <option value="byjson.html">By Json Data</option>
+      <option value="multiple-skin.html">Multiple Skin</option>
+      <option value="css-sprite.html">CSS Sprite</option>
+      <option value="object-oriented-approach.html">Object Oriented Approach</option>
+      <option value="object-oriented-approach-more.html">Object Oriented Approach - More</option>
+      <option value="use-checkbox.html">Use Checkbox</option>
+      <option value="mouse-events.html">Mouse Events</option>
+      <option value="help.html">Documentation</option>
+    </select></td>
+    <td align="left"><a href="help.html">Documentation</a></td>
+  </tr>
+</table>
+<form action="submitdata.php" method="post" enctype="multipart/form-data" name="frmdata">
+<table width="100%" border="0" cellspacing="1" cellpadding="5" class="tblWhite">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">Created from HTML SELECT Element</td>
+  </tr>
+  <tr>
+    <td valign="top">
+    <select name="sample" id="sample" style="width:200px;" data-usesprite="smallIcons">
+      <option class="email" value="email">Email</option>
+      <option class="calendar" value="calendar">Calendar</option>
+      <option class="shoppingcart" value="shopping_cart">Shopping Cart</option>
+      <option class="cd" value="cd">CD</option>
+      <option class="email" value="email">Email</option>
+      <option class="faq"  value="faq">FAQ</option>
+      <option class="games" value="games">Games</option>
+      <option class="music" value="music">Music</option>
+      <option class="phone" value="phone">Phone</option>
+      <option class="graph" value="graph">Graph</option>
+      <option class="secured"  value="secured">Secured</option>
+      <option class="video" value="video">Video</option>
+    </select>
+    &nbsp;
+    <select name="sample2" id="sample2" style="width:200px;">
+      <option class="email" value="email">Email</option>
+      <option class="calendar" value="calendar">Calendar</option>
+      <option class="shoppingcart" value="shopping_cart">Shopping Cart</option>
+      <option class="cd" value="cd">CD</option>
+      <option class="email" value="email">Email</option>
+      <option class="faq"  value="faq">FAQ</option>
+      <option class="games" value="games">Games</option>
+      <option class="music" value="music">Music</option>
+      <option class="phone" value="phone">Phone</option>
+      <option class="graph" value="graph">Graph</option>
+      <option class="secured"  value="secured">Secured</option>
+      <option class="video" value="video">Video</option>
+    </select> &nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom"><h2>Countries Dropdown with flag - Bonus with this script :)</h2></td>
+  </tr>
+  <tr>
+    <td valign="bottom">
+    <select name="countries" id="countries" style="width:300px;">
+      <option value='ad' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag ad" data-title="Andorra">Andorra</option>
+      <option value='ae' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag ae" data-title="United Arab Emirates">United Arab Emirates</option>
+      <option value='af' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag af" data-title="Afghanistan">Afghanistan</option>
+      <option value='ag' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag ag" data-title="Antigua and Barbuda">Antigua and Barbuda</option>
+      <option value='ai' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag ai" data-title="Anguilla">Anguilla</option>
+      <option value='al' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag al" data-title="Albania">Albania</option>
+      <option value='am' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag am" data-title="Armenia">Armenia</option>
+      <option value='an' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag an" data-title="Netherlands Antilles">Netherlands Antilles</option>
+      <option value='ao' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag ao" data-title="Angola">Angola</option>
+      <option value='aq' data-image="../images/msdropdown/icons/blank.gif" data-imagecss="flag aq" data-title="Antarctica">Antarctica</option>
+      
+    </select></td>
+  </tr>
+  <tr>
+    <td valign="bottom">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom"><input type="submit" value="Submit" /></td>
+  </tr>
+  <tr>
+    <td valign="bottom">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="bottom">Source Code:</td>
+  </tr>
+  <tr>
+    <td valign="top">
+    
+<code>
+<pre>
+&lt;script>
+$(document).ready(function(e) {
+	$("#sample").msDropdown(); // this one already has data-usesprite in SELECT
+	$("#sample2").msDropdown({useSprite:'smallIcons'}); //or you can pass sprite class like this.
+    $("#countries").msDropdown(); //image can have css class; Please check source code.
+});
+&lt;/script>    
+</pre>
+</code>    
+    </td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top">&nbsp;</td>
+  </tr>
+</table>
+</form>
+<p>&nbsp;</p>
+
+<script>
+$(document).ready(function(e) {	
+	$("#countries").msDropdown(); //image can have css class; Please check source code.
+	$("#sample2").msDropdown({useSprite:'smallIcons'});
+	$("#sample").msDropdown(); // this one already has data-usesprite in SELECT
+
+//no use
+	try {
+		var pages = $("#pages").msDropdown({on:{change:function(data, ui) {
+												var val = data.value;
+												if(val!="")
+													window.location = val;
+											}}}).data("dd");
+
+		var pagename = document.location.pathname.toString();
+		pagename = pagename.split("/");
+		pages.setIndexByValue(pagename[pagename.length-1]);
+		$("#ver").html(msBeautify.version.msDropdown);
+	} catch(e) {
+		//console.log(e);	
+	}
+	
+	$("#ver").html(msBeautify.version.msDropdown);	
+	
+});
+</script>
+
+</body>
+</html>

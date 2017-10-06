@@ -1,33 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <script src="js/jquery/jquery-1.9.0.min.js"></script>
+    <!-- <msdropdown> -->
+    <link rel="stylesheet" type="text/css" href="msdropdown/dd.css" /> <!-- 드롭다운 폼 -->
+    <script src="js/msdropdown/jquery.dd.js"></script>
+    <!-- </msdropdown> -->
+    <link rel="stylesheet" href="examples/css/sample.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/msdropdown/skin2.css" /> -->
+    <link rel="stylesheet" type="text/css" href="msdropdown/flags.css" />
+
+
 	<!-- index.html-->
 	<link rel="stylesheet" href="home.scss"/>
 </head>
 
-<!-- 지하철 역 선택 및 검색 페이지 -->
-<div class="container" id="index_view">
+<body>
+    <!-- 지하철 역 선택 및 검색 페이지 -->
+
+<header class="applicaition_navbar header row station_nav align-items-center">
+		<!--<a href="/home//home/toilet_detail_info.html.erb"><button class="col-2" id="back_btn"></button></a>-->
+		<!--<button class="col-2 ml-4" id="notice_btn" ></button>-->
+      
+        
+  
+        <a href="/home/notice.html">  <img class="col-2 ml-4" id="notice_img" src="/assets/notice_button.png"/></a>
+        <!-- dropdown -->
+        <div class="push-3 col-6" id="mydropdown">
+       
+            		
+		
+         <!-- <form action="examples/submitdata.php" method="post" enctype="multipart/form-data" name="frmdata"> -->
+           <!--  <table width="100%" border="0" cellspacing="1" cellpadding="5" class="tblWhite">
+              <tr>
+                <td valign="top"> -->
+                  <select name="countries" id="countries" style="width:300px;">
+                    <option value='' data-image="/assets/line_flags/line2.png" data-imagecss="flag" data-title="강변">강변</option>
+                    <option value='ae' data-image="/assets/line_flags/line2.png" data-imagecss="flag ae" data-title="구의">구의</option>
+                    <option value='af' data-image="/assets/line_flags/line4.png" data-imagecss="flag af" data-title="수유">수유</option>
+                    <option value='ag' data-image="/assets/line_flags/line7.png" data-imagecss="flag ag" data-title="사가정">사가정</option>
+                    <option value='ai' data-image="/assets/line_flags/line2.png" data-imagecss="flag ai" data-title="삼성">삼성</option>
+                    <option value='al' data-image="/assets/line_flags/line29.png" data-imagecss="flag al" data-title="종합운동장">종합운동장</option>
+                    <option value='am' data-image="/assets/line_flags/line245.png" data-imagecss="flag am" data-title="동대문역사문화공원">동대문역사문화공원</option>
+                    <option value='an' data-image="/assets/line_flags/line23.png" data-imagecss="flag an" data-title="교대">교대</option>
+                    <option value='ao' data-image="/assets/line_flags/line28.png" data-imagecss="flag ao" data-title="잠실">잠실</option>
+                    <option value='aq' data-image="/assets/line_flags/line2sin.png" data-imagecss="flag aq" data-title="강남">강남</option>
+                    <option value='ar' data-image="images/msdropdown/line/line379.png" data-imagecss="flag ar" data-title="고속터미널">고속터미널</option>
+                    <option value='as' data-image="images/msdropdown/line/line3sin.png" data-imagecss="flag as" data-title="양재">양재</option>
+                  </select>
+        <!--         </td>
+              </tr> -->
+        <script>
+        
+        $(document).ready(function(e) {		
+        	//no use
+        	try {
+        		var pages = $("#pages").msDropdown({on:{change:function(data, ui) {
+        												var val = data.value;
+        												if(val!="")
+        													window.location = val;
+        											}}}).data("dd");
+        
+        		var pagename = document.location.pathname.toString();
+        		pagename = pagename.split("/");
+        		pages.setIndexByValue(pagename[pagename.length-1]);
+        		$("#ver").html(msBeautify.version.msDropdown);
+        	} catch(e) {
+            		//console.log(e);	
+            	}
+            	
+        $("#ver").html(msBeautify.version.msDropdown);
+            		
+            	//convert
+        $("select").msDropdown({roundedBorder:false});
+            	createByJson();
+        $("#tech").data("dd");
+            });
+        function showValue(h) {
+        console.log(h.name, h.value);
+        }
+        $("#tech").change(function() {
+          console.log("by jquery: ", this.value);
+        })
+            //
+        </script>
+            
+        </div>
+
+
+</header>
+
+
+
+
+<div class="container pl-0" id="index_view">
     <!-- 화장실 이미지 좌표 정보 -->
-    <img src="/assets/subway.jpg" alt="" usemap="#Map" vertical-align="middle"/>
+    <img src="/assets/subway.jpg" alt="" usemap="#Map";/>
     <map name="Map" id="Map">
     		<!-- 화장실 1개 -->
-    		<area alt="강변" title="" href="toilet_info.html" shape="poly" coords="1595,932,1633,931,1633,947,1598,947" />
-    		<area alt="구의" title="" href="toilet_info.html" shape="poly" coords="1596,899,1596,915,1620,916,1620,897" />
-    		<area alt="사가정" title="" href="toilet_info.html" shape="poly" coords="1791,667,1794,691,1815,688,1810,666" />
-    		<area alt="수유" title="" href="toilet_info.html" shape="poly" coords="1620,383,1622,400,1641,400,1638,383" />
+    		<area alt="강변" title="" href="/?id=강변" shape="poly" coords="1595,932,1633,931,1633,947,1598,947" />
+    		<area alt="구의" title="" href="/?id=구의" shape="poly" coords="1596,899,1596,915,1620,916,1620,897" />
+    		<area alt="사가정" title="" href="/?id=사가정" shape="poly" coords="1791,667,1794,691,1815,688,1810,666" />
+    		<area alt="수유" title="" href="/?id=수유" shape="poly" coords="1620,383,1622,400,1641,400,1638,383" />
+    		<area alt="삼성" title="" href="/?id=삼성" shape="poly" coords="1529,1233,1530,1284,1589,1282,1584,1232" />
     		
     		<!-- 화장실 2개 -->
-    		<area alt="삼성" title="" href="select_map.html" shape="poly" coords="1529,1233,1530,1284,1589,1282,1584,1232" />
-    		<area alt="잠실" title="" href="select_map.html" shape="poly" coords="1565,1105,1626,1104,1626,1135,1569,1137" />
-    		<area alt="교대" title="" href="select_map.html" shape="poly" coords="1319,1250,1317,1282,1346,1282,1345,1253" />
-    		<area alt="동역사" title="" href="select_map.html" shape="poly" coords="1234,659,1256,659,1262,691,1238,691" />
-    		<area alt="종합운동장" title="" href="select_map.html" shape="poly" coords="1566,1194,1567,1221,1612,1221,1606,1190" />
+    		
+    		<area alt="잠실" title="" href="/?id=잠실" shape="poly" coords="1565,1105,1626,1104,1626,1135,1569,1137" />
+    		<area alt="교대" title="" href="/?id=교대" shape="poly" coords="1319,1250,1317,1282,1346,1282,1345,1253" />
+    		<area alt="동역사" title="" href="/?id=동대문역사문화" shape="poly" coords="1234,659,1256,659,1262,691,1238,691" />
+    		<area alt="종합운동장" title="" href="/?id=종합운동장" shape="poly" coords="1566,1194,1567,1221,1612,1221,1606,1190" />
     
     		<!-- 화장실 3개 이상 -->
-    		<area alt="강남" title="" href="select_map.html" shape="poly" coords="1382,1262,1383,1284,1405,1284,1405,1264" />
-    		<area alt="고속터미널" title="" href="select_map.html" shape="poly" coords="1314,1128,1315,1146,1348,1145,1347,1128" />
-    		<area alt="양재" title="" href="select_map.html" shape="poly" coords="1386,1353,1386,1384,1403,1383,1402,1352" />
+    		<area alt="강남" title="" href="/?id=강남" shape="poly" coords="1382,1262,1383,1284,1405,1284,1405,1264" />
+    		<area alt="고속터미널" title="" href=고속터미널"/?id=" shape="poly" coords="1314,1128,1315,1146,1348,1145,1347,1128" />
+    		<area alt="양재" title="" href="/?id=양재" shape="poly" coords="1386,1353,1386,1384,1403,1383,1402,1352" />
     </map>
 
 
 </div>
-
+</body>
+</html>
 
