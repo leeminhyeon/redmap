@@ -15,9 +15,9 @@
 
 
 <header class="applicaition_navbar header row station_nav align-items-center">
-		<a href="/home/index.html.erb"><button class="col-2" id="back_btn"></button></a>
+		<a href="/?id=<%= $station_info %>"><button class="col-2" id="back_btn"></button></a>
 		<!--<button class="col-1" id="back_btn"><a href="/?btnid="back"></a></button>-->
-		<span class="col-9" id="station_name"><img id="station_number" src="/assets/line_flags/<%= @line_image%>.png" /><%= @station_info %>역</span>
+		<span class="col-9" id="station_name"><img id="station_number" src="/assets/line_flags/<%= $line_image %>.png" /><%= $station_info %>역</span>
 </header>
 
 	<div class="container" id="toilet_info_container">

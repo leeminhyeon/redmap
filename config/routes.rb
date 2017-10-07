@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/home/report'
   get '/home/toilet_detail_info'
   get '/home/select_toilet' 
+  get '/home/dropdown'
 
   
   root 'home#index'
