@@ -7,13 +7,16 @@ Rails.application.routes.draw do
   
   get '/home/notice'
   get '/home/index'
+  post '/home/upload'
   get '/home/report'
+ # get '/home/report'
   get '/home/toilet_detail_info'
   get '/home/select_toilet' 
   get '/home/dropdown'
-
+  
   get '/home/splash'
-   get '/home/splash2'
+  get '/home/splash2'
+  
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -25,68 +25,32 @@
 		<!--<a href="/home//home/toilet_detail_info.html.erb"><button class="col-2" id="back_btn"></button></a>-->
 		<!--<button class="col-2 ml-4" id="notice_btn" ></button>-->
       
+       <a href="/home/notice.html">  <img class="col-2 ml-4" id="notice_img" src="/assets/notice_button.png"/></a>
+       <div class="push-3 col-6 dropdown">
+
+          <button class=" col-6 btn btn-secondary dropdown-toggle" type="button" id="search_station" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            지하철역 선택
+          </button>
+          <div class=" push-3 col-6 dropdown-menu" aria-labelledby="search_station">
+
+       <!--</form>-->
+
+                    <button class="dropdown-item" type="button"><a href="/?id=강변">강변</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=구의">구의</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=수유">수유</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=사가정">사가정</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=삼성">삼성</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=종합운동장">종합운동장</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=동대문역사문화">동대문역사문화공원</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=교대">교대역</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=잠실">잠실역</a></a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=강남">강남</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=고속터미널">고속터미널</a></button>
+                    <button class="dropdown-item" type="button"><a href="/?id=양재">양재역</a></button>
+            
+          </div>
+        </div>
         
-  
-        <a href="/home/notice.html">  <img class="col-2 ml-4" id="notice_img" src="/assets/notice_button.png"/></a>
-        <!-- dropdown -->
-        <div class="push-3 col-6" id="mydropdown">
-       
-            		
-		
-         <!-- <form action="examples/submitdata.php" method="post" enctype="multipart/form-data" name="frmdata"> -->
-           <!--  <table width="100%" border="0" cellspacing="1" cellpadding="5" class="tblWhite">
-              <tr>
-                <td valign="top"> -->
-                  <select name="countries" id="countries" style="width:300px;">
-                    <option value='' data-image="/assets/line_flags/line2.png" data-imagecss="flag" data-title="강변">강변</option>
-                    <option value='ae' data-image="/assets/line_flags/line2.png" data-imagecss="flag ae" data-title="구의">구의</option>
-                    <option value='af' data-image="/assets/line_flags/line4.png" data-imagecss="flag af" data-title="수유">수유</option>
-                    <option value='ag' data-image="/assets/line_flags/line7.png" data-imagecss="flag ag" data-title="사가정">사가정</option>
-                    <option value='ai' data-image="/assets/line_flags/line2.png" data-imagecss="flag ai" data-title="삼성">삼성</option>
-                    <option value='al' data-image="/assets/line_flags/line29.png" data-imagecss="flag al" data-title="종합운동장">종합운동장</option>
-                    <option value='am' data-image="/assets/line_flags/line245.png" data-imagecss="flag am" data-title="동대문역사문화공원">동대문역사문화공원</option>
-                    <option value='an' data-image="/assets/line_flags/line23.png" data-imagecss="flag an" data-title="교대">교대</option>
-                    <option value='ao' data-image="/assets/line_flags/line28.png" data-imagecss="flag ao" data-title="잠실">잠실</option>
-                    <option value='aq' data-image="/assets/line_flags/line2sin.png" data-imagecss="flag aq" data-title="강남">강남</option>
-                    <option value='ar' data-image="images/msdropdown/line/line379.png" data-imagecss="flag ar" data-title="고속터미널">고속터미널</option>
-                    <option value='as' data-image="images/msdropdown/line/line3sin.png" data-imagecss="flag as" data-title="양재">양재</option>
-                  </select>
-        <!--         </td>
-              </tr> -->
-        <script>
-        
-        $(document).ready(function(e) {		
-        	//no use
-        	try {
-        		var pages = $("#pages").msDropdown({on:{change:function(data, ui) {
-        												var val = data.value;
-        												if(val!="")
-        													window.location = val;
-        											}}}).data("dd");
-        
-        		var pagename = document.location.pathname.toString();
-        		pagename = pagename.split("/");
-        		pages.setIndexByValue(pagename[pagename.length-1]);
-        		$("#ver").html(msBeautify.version.msDropdown);
-        	} catch(e) {
-            		//console.log(e);	
-            	}
-            	
-        $("#ver").html(msBeautify.version.msDropdown);
-            		
-            	//convert
-        $("select").msDropdown({roundedBorder:false});
-            	createByJson();
-        $("#tech").data("dd");
-            });
-        function showValue(h) {
-        console.log(h.name, h.value);
-        }
-        $("#tech").change(function() {
-          console.log("by jquery: ", this.value);
-        })
-            //
-        </script>
             
         </div>
 

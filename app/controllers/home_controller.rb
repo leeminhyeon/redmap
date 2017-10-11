@@ -77,4 +77,14 @@ class HomeController < ApplicationController
         
   end
 
+  
+  def upload
+    file = params[:pic]
+    
+    uploader = RedmapUploader.new
+    uploader.store!(file)
+    
+    render "home/index.html"
+    
+  end
 end
