@@ -3,6 +3,7 @@
  #toilet_select_view{
  	width : 100%;
  	height : 90vh;
+    padding-left:0px;
 }
 
 // #toilet_select_image{
@@ -11,6 +12,8 @@
 // }
 
 
-
-
-
+ #back_btn{
+ overflow: hidden;
+ position:fix;
+ 
+}

@@ -50,7 +50,8 @@ body{
   background-repeat: no-repeat;
   border:none;
   background-color: #E2E2E2;
- 
+  position: fixed;
+  
   padding: 0px;
   /*button 이미지(회색 버튼)*/
   width: 100%;

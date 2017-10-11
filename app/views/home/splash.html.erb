@@ -1,27 +1,68 @@
 
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+ 
+ 
 
 
+
+ <!--페이드아웃하면서 index페이지로 넘어가는 코드-->
+ 
+<script type="text/javascript">  
+$(function(){
+   setTimeout(function() {
+      $('#splash').fadeOut(500,function(){
+
+$(location).attr('href', 'index.html')
+
+});
+
+
+   }, 2000);  
+
+
+
+});
+</script>
+ 
 </head>
 
 <body>
+<div id="splash"><center><img src = "../assets/splash.png"></center></div>
+</body>
 
-  <div class = "splash">
-        <center>
-       <a href="/home/index"><img id="splash_img" src = "../assets/splash.png"></a>
-        </center>
-    </div>
+</html>
+
+
+<!--<head>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--  <div class = "splash">-->
+<!--        <center>-->
+<!--       <a href="/home/index"><img id="splash_img" src = "../assets/splash.png"></a>-->
+<!--        </center>-->
+<!--    </div>-->
     
   
-        <script>
+<!--        <script>-->
 
-            $('.splash').load('splash2.html',function(){}).hide().fadeIn(10000);
-
-    </script>
+<!--            $('.splash').load('index.html',function(){}).hide().fadeIn(5000);-->
+           
+<!--    </script>-->
     
     
-</body>
+<!--</body>-->
+
+
 
 
 
